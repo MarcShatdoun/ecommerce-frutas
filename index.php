@@ -22,6 +22,9 @@
           <div>
             <label for="password">Contraseña </label>
             <input type="text" name="password" id="password" />
+            <div class="error-sesion">
+              <p>Usuario no encontrado</p>
+            </div>
           </div>
           <div>
             <button type="submit">Acceder</button>

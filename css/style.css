@@ -31,7 +31,7 @@ main{
     
 }
 
-.error-nombre, .error-apellidos, .error-password, .error-nif{
+.error-nombre, .error-apellidos, .error-password, .error-nif, .error-sesion{
     display: none;
     color: red;
     border: red 2px solid;

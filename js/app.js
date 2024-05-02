@@ -47,9 +47,9 @@ const signupForm = document.getElementById("signupForm")
         document.querySelector(".error-nif").style.display = "none";
       }
 
-    const pattenDireccion = /^[a-zA-ZáéíóúàèìòùüñÑçÇ\s]+$/
+    const pattenDireccion = /^['a-zA-ZáéíóúàèìòùüñÑçÇÁÉÍÓÚÀÈÌÒÙÜ\s]+$/;
 
-    if(validarItems(direccion, patternNombre, "direccion")){
+    if(validarItems(direccion, pattenDireccion, "direccion")){
         return;
     }
     const data = {
@@ -67,9 +67,9 @@ const signupForm = document.getElementById("signupForm")
     body: JSON.stringify(data),
     headers:{
        "Content-Type": "application/json",
-    }
+    },
  })
- .then(res => res.text())
+ .then(() => location.href = "php/ecommerce.php")
  .then(textRecibido => console.log(textRecibido))
  .catch(error => console.log(error));
 
